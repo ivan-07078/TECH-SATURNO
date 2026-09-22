@@ -4,9 +4,16 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
-        <div>
-          <h3>Tech Saturno</h3>
-          <p>Eletrônicos, acessórios e tecnologia para o dia a dia.</p>
+        <div className="footer-copy">
+          <div className="footer-brand">
+            <span className="brand-mark">TS</span>
+            <span>TECH SATURNO</span>
+          </div>
+          <div className="footer-links">
+            <span>Acompanhe nossas novidades</span>
+            <span>Compra segura e protegida</span>
+            <span>Recife e região</span>
+          </div>
         </div>
 
         <div className="footer-links">
@@ -14,6 +21,10 @@ function Footer() {
           <Link to="/categorias">Categorias</Link>
           <Link to="/contato">Contato</Link>
           <Link to="/admin">Admin</Link>
+        </div>
+
+        <div className="footer-note">
+          Todos os direitos reservados © Tech Saturno.
         </div>
       </div>
     </footer>

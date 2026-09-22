@@ -7,21 +7,23 @@ const priceFormatter = new Intl.NumberFormat('pt-BR', {
 
 function ProductCard({ product }) {
   const price = Number(product?.price ?? 0);
+  const visualClass = product?.visual ?? 'visual-headset';
 
   return (
-    <article className="product-card card">
-      <div className="product-image">
-        <span className="badge">Em destaque</span>
-        <button type="button" className="favorite-button" aria-label="Adicionar aos favoritos">
-          <Heart size={16} />
+    <article className="product-card">
+      <div className="product-visual">
+        <span className="product-tag">Novo</span>
+        <button type="button" className="fav-button" aria-label="Adicionar aos favoritos">
+          <Heart size={15} />
         </button>
+        <span className={`visual-device ${visualClass}`} aria-hidden="true" />
       </div>
 
       <div className="product-body">
         <div className="product-meta">
           <span>{product?.category ?? 'Eletrônicos'}</span>
-          <span className="rating">
-            <Star size={14} fill="currentColor" />
+          <span className="product-rating">
+            <Star size={12} fill="currentColor" />
             {product?.rating ?? 4.9}
           </span>
         </div>
@@ -30,9 +32,9 @@ function ProductCard({ product }) {
         <p>{product?.description ?? 'Acesso premium com tecnologia moderna e design premium.'}</p>
 
         <div className="product-footer">
-          <strong>{priceFormatter.format(price)}</strong>
-          <button type="button" className="button button-primary mini-button">
-            <ShoppingCart size={16} />
+          <strong className="product-price">{priceFormatter.format(price)}</strong>
+          <button type="button" className="button button-primary buy-button">
+            <ShoppingCart size={15} />
             Comprar
           </button>
         </div>
