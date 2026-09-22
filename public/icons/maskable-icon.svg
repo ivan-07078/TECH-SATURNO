@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tech Saturno maskable icon">
+  <rect width="512" height="512" rx="120" fill="#0b0b14"/>
+  <circle cx="256" cy="256" r="120" fill="#8b5cf6"/>
+  <path d="M166 182h180v32H166zm0 116h180v32H166zm-35-58h250v32H131z" fill="#f5f3ff"/>
+</svg>
